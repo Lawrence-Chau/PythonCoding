@@ -1,0 +1,40 @@
+name = input("What is your name? ").lower()
+password = input("What is password? ")
+if password == "password":
+  if name == "Cardi B":
+    print("Okurrr, Cardi!") 
+  elif name == "cardi b":
+   print("Okurrr, Cardi!")
+  elif name == "cheuk":
+   print("hihi")
+  elif name == "lawrence":
+   print("it's Lawrence")
+  elif name == "dog":
+   print("i want one")
+  elif name == "cat":
+   print("cat")
+  elif name == "food":
+   print("hungry")
+else:
+  print("Hello, " + name)
+# elif name == "Cardi B":
+#   print("Okurrr, Cardi!")
+# elif name == "cardi b":
+#   print("Okurrr, Cardi!")
+# elif name == "cheuk":
+#   print("hihi")
+# elif name == "lawrence":
+#   print("it's Lawrence")
+# elif name == "dog":
+#   print("i want one")
+# elif name == "cat":
+#   print("cat")
+# elif name == "food":
+#   print("hungry")
+# elif 
+# else:
+#   print("Hello, " + name)
+
+
+
+#continue this greeter and make 5 unique greetings for each name. 
