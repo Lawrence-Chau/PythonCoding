@@ -1,0 +1,53 @@
+## Type out the favorite foods individually with different variables below.
+
+first_fave_food = "watermelon"
+second_fave_food = "grapes"
+
+
+
+#______Class Code-Along:_____#
+
+##CRUD: Create, Read, Update, Delete
+
+#Creating a LIST: 
+
+fave_foods = ["watermelon", "grapes", "empandas", "mango noodle", "canned foods", "sushi", "apples"]
+
+
+# print(fave_foods)
+
+#Reading parts of a LIST:
+# print(fave_foods[0])
+
+
+#Updating a LIST:
+
+# fave_foods[6] = "mac and cheese"
+# print(fave_foods)
+
+#Deleting elements from a LIST:
+
+# fave_foods.pop()
+# print(fave_foods)
+
+#Adding to a LIST:
+
+# print
+# fave_foods.append("apples")
+# print(fave_foods)
+
+# print(len(fave_foods))
+
+#___ITERATION OF LISTS___#
+origami_types = ["crane", "star", "dragon"]
+origami_types[1] = "cat"
+#Iterating using RANGE:
+for x in range(3):
+  # print(x)
+  # print(f'the value of num is {x}')
+  # print("the value of num is" + str(x))
+  print(origami_types[x])
+
+#Iterating Directly:
+for a_list in origami_types:
+  print(f"i can make a {a_list}")
