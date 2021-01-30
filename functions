@@ -1,0 +1,50 @@
+#BUILT IN FUNCTIONS AND METHODS
+
+print("Loíza".upper())
+print(len("Loíza"))
+
+
+#DEFINING A CUSTOM FUNCTION
+def shout(a_name):
+  a_name = a_name.upper()
+  return f'HELLO {a_name}!'
+
+
+
+
+
+#store as a variable
+output = shout("Loiza")
+
+
+
+
+
+#call the function (use it)
+print(shout("Loiza"))
+print(output)
+ 
+shouted_name_1 = shout("Loiza")
+print(shouted_name_1)
+
+my_shout = shout("Lawrence")
+print(my_shout)
+
+
+#now lets call the function and store it into a variable
+
+
+
+
+#Functions with multiple arguments!
+
+def voting_check(name, age):
+  if age >= 18:
+    return "Congratulations " + name + "! You're old enough to vote."
+  else:
+    return "Sorry, " + name + ". You can't vote yet!"
+
+print(voting_check("Lawrence", 16))
+# # Call the function
+print(voting_check("Eliseo", 30))
+print(voting_check("Liv", 17))
