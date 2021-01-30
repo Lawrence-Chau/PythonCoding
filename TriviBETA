@@ -1,0 +1,114 @@
+import requests
+import random
+
+##Weather http://jservice.io/api/clues?category=140
+# Fun facts(alcohol)http://jservice.io/api/clues?category=201
+# disney/animations trivia http://jservice.io/api/clues?category=401
+
+list_of_weather = requests.get("http://jservice.io/api/clues?category=140").json()
+
+list_of_facts = requests.get('http://jservice.io/api/clues?category=201').json()
+
+list_of_disney = requests.get('http://jservice.io/api/clues?category=401').json()
+
+length_weather = len(list_of_weather)
+#print(length_weather)
+
+length_facts = len(list_of_facts)
+#print(length_facts)
+
+length_disney = len(list_of_disney)
+#print(length_disney)
+
+# print(list_of_weather[0]["question"])
+# print(list_of_weather[0]["answer"])
+
+random_number = random.randint(0, length_weather - 1)
+# print(random_number)
+
+# print(list_of_weather[random_number]["question"])
+# print(list_of_weather[random_number]["answer"])
+
+which_topic = input('What topic would you like? (1. Weather; 2. Fun Facts; 3. Disney Facts) Type 1, 2, or 3 ')
+
+
+num_of_questions = input("How many questions will you answer? ")
+
+if which_topic == 1:
+  which_topic = list_of_weather
+  random_number = random.randint(0, length_weather - 1)
+elif which_topic == 2:
+  which_topic = list_of_facts
+  random_number = random.randint(0, length_facts - 1)
+else:
+  which_topic = list_of_disney
+  random_number = random.randint(0, length_disney - 1)
+
+#right_answer = (which_topic[random_number]["answer"])
+
+#user_response = input((which_topic[random_number]["question"])).capitalize()
+right_answer = (which_topic[random_number]["answer"])
+
+for i in range(int(num_of_questions)):
+  user_response = input((which_topic[random_number]["question"])).capitalize()
+  if user_response == right_answer:
+    print("Correct")
+  else:
+    print(which_topic[random_number]["answer"])
+print("Game Over")
+
+
+
+
+
+
+
+
+# def post_weather_question():
+#   num_of_questions = input("How many questions will you answer? ")
+#   for i in range(int(num_of_questions)):
+#     random_number = random.randint (0, length_weather - 1)
+#     user_response = input((list_of_weather[random_number]["question"])).capitalize()
+#     if user_response == list_of_weather[random_number]["answer"]:
+#       print("Correct!")
+#     else:
+#       print(list_of_weather[random_number]["answer"])
+#   return 'Game over'
+
+# print(post_weather_question)
+
+# def post_fun_fact_question():
+#   num_of_questions = input("How many questions will you answer? ")
+#   for i in range(int(num_of_questions)):
+#     random_number = random.randint (0, length - 1)
+#     user_response = input((list_of_facts[random_number]["question"])).capitalize()
+#     if user_response == list_of_facts[random_number]["answer"]:
+#       print("Correct!")
+#     else:
+#       print(list_of_facts[random_number]["answer"])
+#   return "Game over"
+
+
+
+# def post_disney_question():
+#   num_of_questions = input("How many questions will you answer?")
+#   for i in range(int(num_of_questions)):
+#     random_number = random.randint (0, length - 1)
+#     user_response = input((list_of_disney[random_number]["question"])).capitalize()
+#     if user_response == list_of_disney[random_number]["answer"]:
+#       print("Correct!")
+#     else:
+#       print(list_of_disney[random_number]["answer"])
+#   return "Game over"
+
+
+
+# which_topic = input('What topic would you like? (1. Weather; 2. Fun Facts; 3. Disney Facts) Type 1, 2, or 3 ')
+
+# if which_topic == 1:
+#   print(post_weather_question)
+# elif which_topic == 2:
+#   print(post_fun_fact_question)
+# else:
+#   print(post_disney_question)
+
