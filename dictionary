@@ -1,0 +1,24 @@
+angle_details = ["Angle", "Shuman", 5, "Green", "Grey", 9, 8]
+print(angle_details[5])
+
+
+#___________________________________
+##DICTIONARY CODE-ALONG
+angle_dictionary = {"first_name": "Angle", "last_name": "Shuman", "age": "5", "eye_color": "green", "hair_color": "grey", "height": "9", "favorite_number": "8"}
+
+
+#CREATE:
+
+
+#READ:
+print(angle_dictionary["age"])
+print(angle_dictionary["hair_color"])
+
+#UPDATE:
+angle_dictionary["favorite_number"] = 2037 
+print(angle_dictionary)
+
+
+#ADD: 
+angle_dictionary["best_friend"] = "Loiza"
+print(angle_dictionary)
