@@ -1,0 +1,42 @@
+##Follow along Marisa!
+
+##URL: http://jservice.io/api/clues?category=139
+
+##The first thing we need to do is access some packages so we use their built in functions. 
+import requests
+import random 
+
+##Let's connect the [list] of Jeopardy to our code.
+list_of_jeopardy = requests.get('http://jservice.io/api/clues?category=139').json()
+
+#Check the connection by seeing how LONG my list is--how many questions there are.
+length = len(list_of_jeopardy)
+print(length)
+##Let's see if we can get the first question (then after, its answer).
+
+print(list_of_jeopardy[0]['question'])
+print(list_of_jeopardy[0]['answer'])
+##Let's see if we can get a random number so that each time our index number is different and we get a different question.
+random_number = random.randint(0, length - 1)
+print(random_number)
+
+##Use my random number as the index number so every time I run I get a different question.
+
+print(list_of_jeopardy[random_number]["question"])
+right_answer = (list_of_jeopardy[random_number]["answer"])
+
+#random_number generates and stores it on each run
+
+##Now we will show the user a random question AND get their USER INPUT!
+
+#user will put their answer in the variable below:
+
+user_response = input('Enter your answer:')
+
+
+if user_response == right_answer:
+  print(f'you are correct')
+else:
+  print(f'you are wrong')
+
+
