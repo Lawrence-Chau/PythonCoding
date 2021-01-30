@@ -1,0 +1,22 @@
+# print("hello world")
+
+# print(5 + 7) 
+# print(5.0 + 7.0)
+# print("5" + "7")
+
+# my_dog = "robo dog"
+# print(my_dog)
+# print(f"My dog's name is {my_dog}")
+
+# your_name = input("what is your name? ")
+# print(your_name)
+
+name = input("What is your name?" )
+
+if name == "Cardi B":
+  print("Okay, Cardi!")
+elif name == "cardi b":
+  print("Okay, Cardi") 
+else:
+  print("hello, " + name)
+
